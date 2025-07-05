@@ -207,3 +207,37 @@ body::after {
   pointer-events: none;
   z-index: -1;
 }
+.wish-photo {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+.wish-photo {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+.modal-content {
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 100px auto;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.wish-photo {
+  max-width: 100%;    /* รูปไม่เกินความกว้างกล่อง modal */
+  height: auto;       /* รักษาสัดส่วน */
+  margin-top: 10px;   /* เว้นช่องว่างด้านบนระหว่างข้อความกับรูป */
+  border-radius: 8px; /* มุมโค้งสวยงาม */
+  display: block;
+}
+
