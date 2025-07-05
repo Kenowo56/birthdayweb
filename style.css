@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff8f5;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background-color: #ffe0ec;
+  padding: 40px 20px;
+  border-bottom: 4px solid #f8c1d1;
+}
+
+header h1 {
+  margin: 0;
+  color: #e91e63;
+}
+
+header p {
+  margin-top: 10px;
+  color: #555;
+}
+
+.grid {
+  max-width: 900px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid #f8c1d1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card span {
+  display: block;
+  padding: 20px 0;
+  background-color: #ffe0ec;
+  color: #e91e63;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px 30px;
+  border: 4px solid #f8c1d1;
+  border-radius: 16px;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  color: #e91e63;
+  font-size: 28px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.modal-content input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #f8c1d1;
+  border-radius: 8px;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-content button:hover {
+  background-color: #d81b60;
+}
+
+.modal-content {
+  max-width: 400px;
+  width: 90%;
+  padding: 20px 30px;
+  border: 4px solid #f8c1d1;
+  border-radius: 16px;
+  background-color: #fff;
+  margin: 10% auto;
+  text-align: center;
+  position: relative;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+#wish-message {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  border: 3px solid #f8c1d1;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 12px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.img-frame {
+  border-radius: 12px;
+  border: 3px solid #fce4ec;
+  padding: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background: #fff0f5;
+}
+
+.img-frame img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
