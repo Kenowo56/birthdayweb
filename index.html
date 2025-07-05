@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>รวมคำอวยพรวันเกิด</title>
@@ -8,26 +10,77 @@
 </head>
 <body>
   <header>
-    <h1>🎂 รวมคำอวยพรวันเกิด 🎉</h1>
+    <h1 class="modern-title">Happy Dazai's Day</h1>
     <p>เลือกไอคอนเพื่อนเพื่อเปิดคำอวยพร</p>
   </header>
 
   <main class="grid">
-    <div class="card" onclick="openModal('เคน')">
+    <div class="card" onclick="openModal('Ken')">
       <div class="img-frame">
-      <img src="image/person1.jpg" alt="เคน">
+      <img src="image/person1.jpg" alt="Ken">
       </div>
-      <span>เคน</span>
+      <span>Ken</span>
     </div>
+
     <div class="card" onclick="openModal('ลาเลีย')">
-      <img src="image/Screenshot (3).png" alt="ลาเลีย">
+     <div class="img-frame">
+      <img src="image/ken.jpg" alt="ลาเลีย">
+    </div>
       <span>ลาเลีย</span>
     </div>
-    <div class="card" onclick="openModal('kuyyai')">
-      <img src="image/kuyyai.jpg" alt="kuyyai">
-      <span>kuyyai</span>
+
+    <div class="card" onclick="openModal('ลาเลีย')">
+     <div class="img-frame">
+      <img src="image/ken.jpg" alt="ลาเลีย">
     </div>
+      <span>ลาเลีย</span>
+    </div>
+
+    <div class="card" onclick="openModal('ลาเลีย')">
+     <div class="img-frame">
+      <img src="image/ken.jpg" alt="ลาเลีย">
+    </div>
+      <span>ลาเลีย</span>
+    </div>
+
+    <div class="card" onclick="openModal('ลาเลีย')">
+     <div class="img-frame">
+      <img src="image/ken.jpg" alt="ลาเลีย">
+    </div>
+      <span>ลาเลีย</span>
+    </div>
+
+    <div class="card" onclick="openModal('ลาเลีย')">
+     <div class="img-frame">
+      <img src="image/ken.jpg" alt="ลาเลีย">
+    </div>
+      <span>ลาเลีย</span>
+    </div>
+
+    <div class="card" onclick="openModal('ลาเลีย')">
+     <div class="img-frame">
+      <img src="image/ken.jpg" alt="ลาเลีย">
+    </div>
+      <span>ลาเลีย</span>
+    </div>
+
+    <div class="card" onclick="openModal('ลาเลีย')">
+     <div class="img-frame">
+      <img src="image/ken.jpg" alt="ลาเลีย">
+    </div>
+      <span>ลาเลีย</span>
+    </div>
+
+    <div class="card" onclick="openModal('ลาเลีย')">
+     <div class="img-frame">
+      <img src="image/ken.jpg" alt="ลาเลีย">
+    </div>
+      <span>ลาเลีย</span>
+    </div>
+    
   </main>
+
+
 
   <!-- Modal -->
   <div id="modal" class="modal">
@@ -52,7 +105,7 @@
     let currentPerson = '';
 
     const messages = {
-      'เคน': {
+      'Ken': {
         password: '1111',
         message: 'สุขสันต์วันเกิดนะเคน! 🎉 ขอให้มีความสุขมากๆ สมหวังทุกอย่าง ❤️efqwlvntvkvhthrthqviyo4ybya4vtpt6v76b4747i4ytyuevrguict3qiuvc24 2i  22rtyrtvrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrttrtrtrtrt'
       },

@@ -172,3 +172,36 @@ header p {
   display: block;
   border-radius: 10px;
 }
+.modern-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #222;
+  margin-top: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('image/rayla.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  opacity: 0.15;   /* ทำให้จางลง */
+  pointer-events: none;
+  z-index: -1;
+}
