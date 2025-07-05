@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>รวมคำอวยพรวันเกิด</title>
+  <title>Happy Dazai's Day</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,151 +16,45 @@
   <main class="grid">
     <div class="card" onclick="openModal('Ken')">
       <div class="img-frame">
-      <img src="image/person1.jpg" alt="Ken">
+        <img src="image/person1.jpg" alt="Ken" />
       </div>
       <span>Ken</span>
     </div>
 
-    <div class="card" onclick="openModal('ลาเลีย')">
-     <div class="img-frame">
-      <img src="image/ken.jpg" alt="ลาเลีย">
-    </div>
-      <span>ลาเลีย</span>
-    </div>
-
-    <div class="card" onclick="openModal('ลาเลีย')">
-     <div class="img-frame">
-      <img src="image/ken.jpg" alt="ลาเลีย">
-    </div>
-      <span>ลาเลีย</span>
+    <div class="card" onclick="openModal('Lalia')">
+      <div class="img-frame">
+        <img src="image/person2.jpg" alt="Lalia" />
+      </div>
+      <span>Lalia</span>
     </div>
 
-    <div class="card" onclick="openModal('ลาเลีย')">
-     <div class="img-frame">
-      <img src="image/ken.jpg" alt="ลาเลีย">
+    <div class="card" onclick="openModal('คะนิ้ง')">
+      <div class="img-frame">
+        <img src="image/คะนิ้ง.jpg" alt="คะนิ้ง" />
+      </div>
+      <span>คะนิ้ง</span>
     </div>
-      <span>ลาเลีย</span>
-    </div>
-
-    <div class="card" onclick="openModal('ลาเลีย')">
-     <div class="img-frame">
-      <img src="image/ken.jpg" alt="ลาเลีย">
-    </div>
-      <span>ลาเลีย</span>
-    </div>
-
-    <div class="card" onclick="openModal('ลาเลีย')">
-     <div class="img-frame">
-      <img src="image/ken.jpg" alt="ลาเลีย">
-    </div>
-      <span>ลาเลีย</span>
-    </div>
-
-    <div class="card" onclick="openModal('ลาเลีย')">
-     <div class="img-frame">
-      <img src="image/ken.jpg" alt="ลาเลีย">
-    </div>
-      <span>ลาเลีย</span>
-    </div>
-
-    <div class="card" onclick="openModal('ลาเลีย')">
-     <div class="img-frame">
-      <img src="image/ken.jpg" alt="ลาเลีย">
-    </div>
-      <span>ลาเลีย</span>
-    </div>
-
-    <div class="card" onclick="openModal('ลาเลีย')">
-     <div class="img-frame">
-      <img src="image/ken.jpg" alt="ลาเลีย">
-    </div>
-      <span>ลาเลีย</span>
-    </div>
-    
   </main>
-
-
 
   <!-- Modal -->
   <div id="modal" class="modal">
     <div class="modal-content">
-      <span id="close-btn" class="close" onclick="closeModal()">&times;</span>
-      <div id="modal-body">
-        <h2 id="modal-title"></h2>
-        <div id="password-section">
-          <p>กรอกรหัสเพื่อดูคำอวยพร</p>
-          <input type="password" id="password-input" placeholder="รหัสผ่าน">
-          <button onclick="checkPassword()">ยืนยัน</button>
-          <p id="error" style="color:red;"></p>
-        </div>
-        <div id="message-section" style="display:none;">
-          <p id="wish-message"></p>
-        </div>
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+
+      <div id="password-section" style="display:none;">
+        <p>กรอกรหัสเพื่อดูคำอวยพรอีตุ๊ด</p>
+        <input type="password" id="password-input" placeholder="รหัสผ่าน" />
+        <button onclick="checkPassword()">ยืนยัน</button>
+        <p id="error" style="color:red;"></p>
+      </div>
+
+      <div id="message-section" style="display:none;">
+        <p id="wish-message"></p>
       </div>
     </div>
   </div>
 
-  <script>
-    let currentPerson = '';
-
-    const messages = {
-      'Ken': {
-        password: '1111',
-        message: 'สุขสันต์วันเกิดนะเคน! 🎉 ขอให้มีความสุขมากๆ สมหวังทุกอย่าง ❤️efqwlvntvkvhthrthqviyo4ybya4vtpt6v76b4747i4ytyuevrguict3qiuvc24 2i  22rtyrtvrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrtrttrtrtrtrt'
-      },
-      'ลาเลีย': {
-        password: '2222',
-        message: 'สุขสันต์วันเกิดลาเลีย! 🎂 ขอให้สดใส ร่าเริง น่ารักแบบนี้ตลอดไป ✨'
-      },
-      'kuyyai': {
-        password: '3333',
-        message: 'แฮปปี้เบิร์ธเดย์ kuyyai! 🎁 ขอให้โชคดี มีความสุขทุกวัน 🍰'
-      }
-    };
-
-    function openModal(person) {
-      currentPerson = person;
-
-      if (!messages[currentPerson]) {
-        alert(`❗ ไม่พบข้อมูลของ "${person}" ในระบบ`);
-        return;
-      }
-
-      document.getElementById('modal-title').textContent = `🔒 ${person}`;
-      document.getElementById('password-input').value = '';
-      document.getElementById('error').textContent = '';
-      document.getElementById('password-section').style.display = 'block';
-      document.getElementById('message-section').style.display = 'none';
-      document.getElementById('modal').style.display = 'block';
-    }
-
-    function closeModal() {
-      document.getElementById('modal').style.display = 'none';
-    }
-
-    function checkPassword() {
-      const input = document.getElementById('password-input').value;
-      const personData = messages[currentPerson];
-
-      if (!personData) {
-        document.getElementById('error').textContent = 'ไม่พบข้อมูลคนนี้';
-        return;
-      }
-
-      if (input === personData.password) {
-        document.getElementById('password-section').style.display = 'none';
-        document.getElementById('message-section').style.display = 'block';
-        document.getElementById('wish-message').textContent = personData.message;
-      } else {
-        document.getElementById('error').textContent = 'รหัสผิดจ้า ลองใหม่!';
-      }
-    }
-
-    window.onclick = function(event) {
-      if (event.target == document.getElementById('modal')) {
-        closeModal();
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

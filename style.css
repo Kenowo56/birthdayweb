@@ -183,6 +183,8 @@ header p {
   background: linear-gradient(90deg, #ff8a00, #e52e71);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -201,7 +203,7 @@ body::after {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
-  opacity: 0.15;   /* ทำให้จางลง */
+  opacity: 0.55;   /* ทำให้จางลง */
   pointer-events: none;
   z-index: -1;
 }
